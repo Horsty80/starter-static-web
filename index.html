@@ -1,5 +1,23 @@
-<!DOCTYPE html><title>Page title</title>
-<p>Welcome on this starter</p>
-<p>Please go to readme page to see how to use it</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    {% if myProject.environment == "production" %}
+    <p>Production</p>
+    {% else %}
+    <p>Development</p>
+    <p>test: {{site.appTitle}}</p>
+    <p>project: {{myProject.test}}</p>
+    {% endif %}
+    <h1>Welcome on this starter</h1>
+    <p>Please go to readme page to see how to use it</p>
 
-<a href="/readme">Readme</a>
+    <a href="/readme">Readme</a>
+  </body>
+</html>

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "eleventy --serve --incremental",
+    "clean": "rimraf _site",
+    "dev": "pnpm clean && eleventy --serve",
     "build": "eleventy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,6 +13,12 @@
   "author": "Cyril Hue",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "esbuild": "^0.17.16",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11"
   }
 }
